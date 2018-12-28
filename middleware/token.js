@@ -16,8 +16,6 @@ module.exports = (req, res, next) => {
     });
   }
 
-  console.log(path.resolve(__dirname))
-
   let cookieSessionPath = path.join(path.resolve(__dirname), '..', `sessions`, `${token}.json`)
 
   if(!fs.existsSync(cookieSessionPath)) {
