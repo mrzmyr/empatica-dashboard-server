@@ -1,4 +1,6 @@
+const fs = require('fs');
 const path = require('path');
+const mkdirp = require('mkdirp');
 
 const EmpaticaApi = require('empatica-api');
 const uuid = require('uuid/v4');
@@ -15,10 +17,17 @@ module.exports = (req, res, next) => {
   }
 
   let token = uuid();
+  let sessionsPath = path.join(__dirname, '..', 'sessions');
+  let cookieSessionPath = path.join(sessionsPath, `${token}.json`);
+
+  if(!fs.existsSync(sessionsPath)) {
+    mkdirp.sync(sessionsPath)
+  }
+
   let empaticaApi = new EmpaticaApi({
     username,
     password,
-    jar: path.join(__dirname, '..', 'sessions', `${token}.json`)
+    jar: cookieSessionPath
   })
 
   empaticaApi
