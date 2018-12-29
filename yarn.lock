@@ -289,9 +289,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 empatica-api@^0.1.10:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/empatica-api/-/empatica-api-0.1.11.tgz#a83f75e023669fb3d9dea508c05764fa38eb7753"
-  integrity sha512-84Fn5RQhly8XSe+P8VJIM1veYx3E0ZDHM2R6Auwdj8gVSr6LFE1UpqSiB2qF/JI5mtCuWPEKSpCfADOk1RweKg==
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/empatica-api/-/empatica-api-0.1.12.tgz#bfdcd811cc92acbda7c224bf68e4ec0ab4514cca"
+  integrity sha512-5fgeOudJWB1Vpupl9QFwZhMiYfrpI/m9Bsq++lgZGgHoAKR9v62sUcTFo4M/I4azWf9IK8mxrpW3dLd7QnRINw==
   dependencies:
     request "^2.88.0"
     request-promise-native "^1.0.5"
